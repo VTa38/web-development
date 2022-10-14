@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Подробнее</title>
+    <meta name="author" content="Виктор Запорожец">
+    <style>
+      body {
+        margin: 0 auto;
+        max-width: 700px;
+        min-width: 0;
+        padding: 0 10px 25px;
+        font-family: "Helvetica", "Arial", sans-serif;
+      }
+      title {
+        color: rgb(88, 23, 23)
+      }
+      h2 {
+        margin-top: 1em;
+        padding-top: 1em;
+      }
+      nav a {
+        margin-left: 20px;
+      }
+      body {
+        color: rgb(88, 23, 23);
+      }
+      h1, h2, strong {
+        color: rgb(88, 23, 23)
+      }
+      header {
+        margin: 0px; font-size: 23px;
+      }
+      article {
+        font-size: 16px;
+      }
+      nav {
+        font-size: 18px; letter-spacing: 1px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      h2 {
+        font-size: 23px;
+      }
+      a { color: #ffa64d; }
+
+      /*
+      https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+      grid-style
+      */
+
+      body {
+        display: grid;
+        row-gap: 5px;
+        grid-template-columns: auto auto;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+          "header nav"
+          "ct ct"
+      }
+      header {
+        grid-area: header;
+        justify-self: left;
+        align-self: end;
+      }
+      nav {
+        grid-area: nav;
+        justify-self: right;
+        align-self: end;
+      }
+      nav a {
+        text-align: right;
+      }
+      article {
+        grid-area: ct;
+        border-top: 2px solid gray;
+      }
+      /*
+      Responsive design
+      */
+
+      @media screen and (max-width: 430px) {
+        body {
+          grid-template-columns: auto;
+          grid-template-rows: minmax(40px, auto) minmax(30px, auto) auto auto;
+          grid-template-areas:
+          "header"
+          "nav"
+          "ct"
+        }
+        header, nav {
+          text-align: center;
+          justify-self: center;
+        }
+        nav a {
+          margin: 0 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      Статья
+    </header>
+    <nav>
+      <a href= "../content/">На главную</a>
+      <a href="../light/">Света</a>
+    </nav>
+    <article>
+      <h1 id="podrobnee">Подробнее</h1>
+<p>Теория берёт своё начало от Гюйгенса. Она рассматривает свет как совокупность поперечных монохроматических электромагнитных волн, а наблюдаемые оптические эффекты — как результат интерференции этих волн. При этом считается, что в отсутствие перехода энергии излучения в другие виды энергии эти волны не влияют друг на друга в том смысле, что, вызвав в некоторой области пространства интерференционные явления, волна продолжает распространяться дальше без изменения своих характеристик. Волновая теория электромагнитного излучения нашла своё теоретическое описание в работах Максвелла в форме уравнений Максвелла. Использование представления о свете как волне позволяет объяснить явления, связанные с интерференцией и дифракцией, в том числе структуру светового поля (построение изображений и голографию).</p>
+<h2 id="khristian-giuigens-pridumal-svetu">Христиан Гюйгенс (придумал свету)</h2>
+<img src="https://sun9-32.userapi.com/impf/c847019/v847019519/143978/Y0296KJVs-o.jpg?size=580x604&quality=96&sign=2950ae8c63733f751424adedeabe2d9b&type=album">
+
+    </article>
+  </body>
+</html>
